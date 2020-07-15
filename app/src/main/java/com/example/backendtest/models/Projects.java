@@ -1,4 +1,4 @@
-package com.example.backendtest;
+package com.example.backendtest.models;
 
 import java.util.List;
 import com.google.gson.annotations.Expose;
@@ -14,6 +14,13 @@ public class Projects {
     private String link;
     @SerializedName("desc")
     private String desc;
+
+    public Projects(String title, List<String> contributors, String link, String desc) {
+        this.title = title;
+        this.contributors = contributors;
+        this.link = link;
+        this.desc = desc;
+    }
 
     public String getTitle() {
         return title;

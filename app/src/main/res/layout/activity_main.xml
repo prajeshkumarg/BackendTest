@@ -1,31 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/githubSwipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GithubActivity">
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="8dp"
-    tools:context=".GithubActivity">
+    tools:context=".activities.GithubActivity">
 
-        <androidx.core.widget.NestedScrollView
-
-            android:layout_width="match_parent"
-            android:id="@+id/nestedScrollview"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/textviewGithub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16dp"
-                android:textColor="#000" />
-
-
-        </androidx.core.widget.NestedScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerviewGithub"/>
     <Button
-        android:layout_below="@+id/nestedScrollview"
+        android:layout_below="@+id/recyclerviewGithub"
         android:layout_centerInParent="true"
         android:id="@+id/buttonGithub"
         android:layout_width="wrap_content"
@@ -33,3 +28,4 @@
         android:text="Go to Project"
         tools:ignore="NotSibling" />
 </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
